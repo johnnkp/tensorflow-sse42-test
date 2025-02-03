@@ -26,7 +26,7 @@ echo ""
 
 # Run configure.
 export PYTHON_BIN_PATH=`which python3`
-export CC_OPT_FLAGS='-mavx'
+export CC_OPT_FLAGS='-msse4.2'
 
 export TF_NEED_ROCM=0
 export TF_NEED_CUDA=1

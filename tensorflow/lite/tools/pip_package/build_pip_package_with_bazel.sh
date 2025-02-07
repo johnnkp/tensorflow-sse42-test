@@ -82,7 +82,7 @@ case "${TENSORFLOW_TARGET}" in
       --copt=-O3"
     ;;
   native)
-    BAZEL_FLAGS="--copt=-O3 --copt=-march=native"
+    BAZEL_FLAGS="--copt=-O3 --copt=-msse4.2"
     ;;
   *)
     BAZEL_FLAGS="--copt=-O3"

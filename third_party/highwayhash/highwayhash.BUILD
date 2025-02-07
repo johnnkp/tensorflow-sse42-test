@@ -147,8 +147,8 @@ cc_library(
     srcs = ["highwayhash/hh_avx2.cc"],
     hdrs = ["highwayhash/highwayhash_target.h"],
     copts = select({
-        ":k8": ["-mavx2"],
-        ":haswell": ["-mavx2"],
+        ":k8": ["-msse4.2"],
+        ":haswell": ["-msse4.2"],
         "//conditions:default": ["-DHH_DISABLE_TARGET_SPECIFIC"],
     }),
     textual_hdrs = [

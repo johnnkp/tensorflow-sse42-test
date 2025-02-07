@@ -1490,12 +1490,13 @@ cc_test(
     copts = select(
         {
             ":haswell": [
-                "-mavx2",
+                "-msse4.2",
             ],
             ":k8": [
-                "-mavx2",
+                "-msse4.2",
             ],
             "//conditions:default": [
+                "-msse4.2",
             ],
         },
     ),

@@ -457,8 +457,8 @@ build:verbose_logs --output_filter=
 # Instruction set optimizations
 # TODO(gunan): Create a feature in toolchains for avx/avx2 to
 #   avoid having to define linux/win separately.
-build:avx_linux --copt=-mavx
-build:avx_linux --host_copt=-mavx
+build:avx_linux --copt=-msse4.2
+build:avx_linux --host_copt=-msse4.2
 build:avx_win --copt=/arch:AVX
 
 # TODO(belitskiy): Remove once Win2019 is gone.

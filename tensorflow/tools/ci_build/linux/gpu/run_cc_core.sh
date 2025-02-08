@@ -30,7 +30,7 @@ export CC_OPT_FLAGS='-msse4.2'
 
 export TF_NEED_ROCM=0
 export TF_NEED_CUDA=1
-export TF_CUDA_COMPUTE_CAPABILITIES=3.7
+export TF_CUDA_COMPUTE_CAPABILITIES=6.0
 
 yes "" | $PYTHON_BIN_PATH configure.py
 

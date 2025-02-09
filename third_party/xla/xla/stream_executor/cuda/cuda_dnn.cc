@@ -8672,7 +8672,7 @@ void initialize_cudnn() {
           });
 
   if (!status.ok()) {
-    LOG(DEBUG) << "Unable to register cuDNN factory: " << status.message();
+    LOG(INFO) << "Unable to register cuDNN factory: " << status.message();
     }
 
   // }

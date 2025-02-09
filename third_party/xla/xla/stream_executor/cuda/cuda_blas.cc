@@ -1390,10 +1390,10 @@ absl::Status CUDABlas::GetVersion(std::string *version) {
 }
 
 void initialize_cublas() {
-  bool cuBlasAlreadyRegistered = PluginRegistry::Instance()->HasFactory(
+  /* bool cuBlasAlreadyRegistered = PluginRegistry::Instance()->HasFactory(
       cuda::kCudaPlatformId, PluginKind::kBlas);
 
-  if (!cuBlasAlreadyRegistered) {
+  if (!cuBlasAlreadyRegistered) { */
 
   absl::Status status =
       PluginRegistry::Instance()->RegisterFactory<PluginRegistry::BlasFactory>(
@@ -1409,10 +1409,10 @@ void initialize_cublas() {
           });
 
   if (!status.ok()) {
-    LOG(ERROR) << "Unable to register cuBLAS factory: " << status.message();
+    LOG(DEBUG) << "Unable to register cuBLAS factory: " << status.message();
     }
 
-  }
+  // }
 
 }
 

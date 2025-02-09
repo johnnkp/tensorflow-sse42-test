@@ -8653,10 +8653,10 @@ absl::Status CudnnGraph::Execute(Stream& stream,
 }  // namespace gpu
 
 void initialize_cudnn() {
-  bool cuDnnAlreadyRegistered = PluginRegistry::Instance()->HasFactory(
+  /* bool cuDnnAlreadyRegistered = PluginRegistry::Instance()->HasFactory(
       cuda::kCudaPlatformId, PluginKind::kDnn);
 
-  if (!cuDnnAlreadyRegistered) {
+  if (!cuDnnAlreadyRegistered) { */
 
   absl::Status status =
       PluginRegistry::Instance()->RegisterFactory<PluginRegistry::DnnFactory>(
@@ -8672,10 +8672,10 @@ void initialize_cudnn() {
           });
 
   if (!status.ok()) {
-    LOG(ERROR) << "Unable to register cuDNN factory: " << status.message();
+    LOG(DEBUG) << "Unable to register cuDNN factory: " << status.message();
     }
 
-  }
+  // }
 
 }
 

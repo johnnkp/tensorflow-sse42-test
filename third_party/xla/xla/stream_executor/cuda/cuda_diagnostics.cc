@@ -15,9 +15,9 @@ limitations under the License.
 
 #include "xla/stream_executor/cuda/cuda_diagnostics.h"
 
-#if !defined(PLATFORM_WINDOWS)
+/* #if !defined(PLATFORM_WINDOWS)
 #include <dirent.h>
-#endif
+#endif */
 
 #include <limits.h>
 #include <stddef.h>
@@ -25,11 +25,11 @@ limitations under the License.
 #include <stdlib.h>
 #include <string.h>
 
-#if !defined(PLATFORM_WINDOWS)
+/* #if !defined(PLATFORM_WINDOWS)
 #include <link.h>
 #include <sys/sysmacros.h>
 #include <unistd.h>
-#endif
+#endif */
 
 #include <sys/stat.h>
 

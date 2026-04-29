@@ -38,9 +38,9 @@ pip list
 
 # Run configure.
 export TF_NEED_CUDA=1
-export TF_CUDA_COMPUTE_CAPABILITIES=6.0
+export TF_CUDA_COMPUTE_CAPABILITIES=7.5
 export PYTHON_BIN_PATH=`which python`
-yes "" | TF_NEED_CUDA=1 TF_CUDA_COMPUTE_CAPABILITIES=6.0 $PYTHON_BIN_PATH configure.py
+yes "" | TF_NEED_CUDA=1 TF_CUDA_COMPUTE_CAPABILITIES=7.5 $PYTHON_BIN_PATH configure.py
 
 # Run bazel test command. Double test timeouts to avoid flakes.
 # Setting KMP_BLOCKTIME to 0 lets OpenMP threads to sleep right after parallel execution

@@ -153,10 +153,10 @@ cc_library(
     hdrs = ["highwayhash/highwayhash_target.h"],
     copts = select({
         "@platforms//cpu:x86_64": [
-            "-mavx2",
-            "-march=haswell",
+            "-msse4.2",
+            # "-march=haswell",
         ],
-        "//conditions:default": ["-DHH_DISABLE_TARGET_SPECIFIC"],
+        "//conditions:default": ["-DHH_DISABLE_TARGET_SPECIFIC", "-msse4.2"],
     }),
     textual_hdrs = [
         "highwayhash/hh_avx2.h",

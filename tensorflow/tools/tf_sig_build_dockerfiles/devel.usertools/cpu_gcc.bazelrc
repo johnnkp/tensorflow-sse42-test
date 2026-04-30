@@ -21,7 +21,7 @@ build --python_path="/usr/bin/python3"
 build --define=tf_api_version=2 --action_env=TF2_BEHAVIOR=1
 
 # Target the AVX instruction set
-build --copt=-mavx --host_copt=-mavx
+build --copt=-msse4.2 --host_copt=-msse4.2
 
 # Store performance profiling log in the mounted artifact directory.
 # The profile can be viewed by visiting chrome://tracing in a Chrome browser.

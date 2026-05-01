@@ -1325,9 +1325,10 @@ cc_test(
     copts = select(
         {
             ":x86_64": [
-                "-mavx2",
+                "-msse4.2",
             ],
             "//conditions:default": [
+                "-msse4.2",
             ],
         },
     ),

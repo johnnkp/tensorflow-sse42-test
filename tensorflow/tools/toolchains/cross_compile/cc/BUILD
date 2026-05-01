@@ -54,7 +54,7 @@ cc_toolchain_config(
         "-Wno-free-nonheap-object",
         "-fcolor-diagnostics",
         "-fno-omit-frame-pointer",
-        "-mavx",
+        "-msse4.2",
     ],
     compiler = "clang",
     coverage_compile_flags = ["--coverage"],

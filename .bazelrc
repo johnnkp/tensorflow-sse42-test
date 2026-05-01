@@ -539,8 +539,8 @@ common:verbose_logs --output_filter=
 # Instruction set optimizations
 # TODO(gunan): Create a feature in toolchains for avx/avx2 to
 #   avoid having to define linux/win separately.
-common:avx_linux --copt=-mavx
-common:avx_linux --host_copt=-mavx
+common:avx_linux --copt=-msse4.2
+common:avx_linux --host_copt=-msse4.2
 common:avx_linux --copt="-mf16c"
 common:avx_win --copt=/arch:AVX
 common:avx_win --copt="-mf16c"
